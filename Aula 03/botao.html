@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="botao 1">Clique em mim</button>
+    <button>Não clique aqui</button>
+</body>
+
+<script>
+
+
+    //O JavaScript fica aqui
+    function criarParagrafo() {
+        let para = document.createElement('p');
+        para.textContent = "Você clicou no botão";
+        document.body.appendChild(para);
+ }
+ const botoes = document.querySelectorAll('button');
+ for(var i=0; i <botoes.length; i++){
+     botoes[i].addEventListener('click', criarParagrafo);
+     var botao1 = document.getElemenyById(“botao1”);
+ }
+</script>
+</html>
