@@ -1,0 +1,104 @@
+{
+    "notas": [
+        {
+            "id": 1,
+            "PortuguesN1": 7,
+            "PortuguesN2": 8,
+            "MatematicaN1": 9,
+            "MatematicaN2": 9,
+            "CienciasN1": 8,
+            "CienciasN2": 9,
+            "nome": "João Pedro"
+        },
+        {
+            "id": 2,
+            "PortuguesN1": 8,
+            "PortuguesN2": 8,
+            "MatematicaN1": 10,
+            "MatematicaN2": 9,
+            "CienciasN1": 7,
+            "CienciasN2": 9,
+            "nome": "Maria Antonela"
+        },
+        {
+            "id": 3,
+            "PortuguesN1": 8,
+            "PortuguesN2": 6,
+            "MatematicaN1": 10,
+            "MatematicaN2": 10,
+            "CienciasN1": 7,
+            "CienciasN2": 9,
+            "nome": "Pedro Ribeiro"
+        },
+        {
+            "id": 4,
+            "PortuguesN1": 6,
+            "PortuguesN2": 10,
+            "MatematicaN1": 10,
+            "MatematicaN2": 8,
+            "CienciasN1": 10,
+            "CienciasN2": 9,
+            "nome": "Carlos Varela"
+        },
+        {
+            "id": 5,
+            "PortuguesN1": 8,
+            "PortuguesN2": 6,
+            "MatematicaN1": 10,
+            "MatematicaN2": 9,
+            "CienciasN1": 9,
+            "CienciasN2": 9,
+            "nome": "Augusta Filha"
+        },
+        {
+            "id": 6,
+            "PortuguesN1": 8,
+            "PortuguesN2": 9,
+            "MatematicaN1": 8,
+            "MatematicaN2": 10,
+            "CienciasN1": 7,
+            "CienciasN2": 9,
+            "nome": "João Vitor"
+        },
+        {
+            "id": 7,
+            "PortuguesN1": 10,
+            "PortuguesN2": 10,
+            "MatematicaN1": 10,
+            "MatematicaN2": 10,
+            "CienciasN1": 9,
+            "CienciasN2": 9,
+            "nome": "Carol Emilia"
+        },
+        {
+            "id": 8,
+            "PortuguesN1": 10,
+            "PortuguesN2": 6,
+            "MatematicaN1": 8,
+            "MatematicaN2": 10,
+            "CienciasN1": 7,
+            "CienciasN2": 8,
+            "nome": "Carmem Miranda"
+        },
+        {
+            "id": 9,
+            "PortuguesN1": 8,
+            "PortuguesN2": 6,
+            "MatematicaN1": 8,
+            "MatematicaN2": 8,
+            "CienciasN1": 8,
+            "CienciasN2": 8,
+            "nome": "Maria Silva"
+        },
+        {
+            "id": 10,
+            "PortuguesN1": 10,
+            "PortuguesN2": 9,
+            "MatematicaN1": 10,
+            "MatematicaN2": 10,
+            "CienciasN1": 7,
+            "CienciasN2": 8,
+            "nome": "Mateus Conrado"
+        }
+    ]
+}

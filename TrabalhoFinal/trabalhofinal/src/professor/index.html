@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Pedra Filosofal</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3E51E0 ;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img id="imgnav" src="../../img/logoescola.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav px-3">
+                        <li class="nav-item px-3">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link active" href="#">Área do Aluno</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link active" href="#">Pais/Responsáveis</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link active" href="#">Financeiro</a>
+                        </li>
+                        <li class="nav-item dropdown px-3">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Instituição
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Professor</a></li>
+                                <li><a class="dropdown-item" href="#">Secretaria</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container py-4">
+        <h3 class="text-center">Calendário Bimestral Geral</h3>
+        <div>
+            <div class="row">
+                <div class="col-5 border-end">
+                    <div class="p-3">
+                        <select class="form-select mx-auto" aria-label="Default select example" id="calendariomes">
+                            <option value="1">Março</option>
+                            <option value="2">Abril</option>
+                            <option value="3">Maio</option>
+                            <option value="4">Junho</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-3">
+                        <button type="submit" class="btn btn-outline-primary me-md-1" id="month"
+                            onclick="calendario.listaTabela()">Verificar</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <img class="w-50 pt-5 mx-auto d-grid " src="../../img/logoescola.png" alt="">
+                                <h6 class="text-center">Escola - Pedra Filosofal</h6>
+                            </div>
+                        </div>
+                        <div class="col-6 pt-2">
+                            <ul class="list-group list-group-flush p-1 rounded">
+                                <li class="list-group-item bg-primary text-nowrap"
+                                    style="font-size: 0.8em; color: white;">Início das aulas</li>
+                                <li class="list-group-item bg-warning text-nowrap mt-1"
+                                    style="font-size: 0.8em; color: black;">Viagem escolar</li>
+                                <li class="list-group-item bg-success text-nowrap mt-1"
+                                    style="font-size: 0.8em; color: white;">Provas</li>
+                                <li class="list-group-item bg-danger text-nowrap mt-1"
+                                    style="font-size: 0.8em; color: white;">Conselho de Classe</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-6 border">
+
+                    <table class="table table-sm">
+                        <thead>
+
+                            <tr class="text-center">
+                                <th>D</th>
+                                <th>S</th>
+                                <th>T</th>
+                                <th>Q</th>
+                                <th>Q</th>
+                                <th>S</th>
+                                <th>S</th>
+                            </tr>
+
+                        </thead>
+                        <tbody id="tbodycalendar" class="text-center pt-2 mx-2" style="font-size: 1.5em;">
+
+
+                        </tbody>
+                    </table>
+
+    </section>
+
+    <hr>
+
+    <section class="container py-4">
+        <h3 class="text-center">Consulta das Turmas/Alunos</h3>
+        <div>
+            <div class="row p-4">
+                <div class="col-4">
+                    <select class="form-select" aria-label="Default select example" id="turma">
+                        <option>Turma 1</option>
+                        <option>Turma 2</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-success" onclick="clicar()">Consultar</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col-2">Turma</th>
+                            <th scope="col-3">Nome</th>
+                            <th scope="col-3">Idade</th>
+                            <th scope="col-2">Responsável</th>
+                            <th scope="col-2">Disciplinas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodydadossecretaria">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="container py-4">
+        <h3 class="text-center">Lançamento de Faltas</h3>
+        <div>
+            <div class="row p-4">
+                <div class="col-4">
+                    <select class="form-select" aria-label="Default select example" id="aluno">
+                        <option>João Pedro</option>
+                        <option>Maria Antonela</option>
+                        <option>Pedro Ribeiro</option>
+                        <option>Carlos Varela</option>
+                        <option>Augusta Filha</option>
+                        <option>João Vitor</option>
+                        <option>Carol Emilia</option>
+                        <option>Carmem Miranda</option>
+                        <option>Maria Silva</option>
+                        <option>Mateus Conrado</option>
+                    </select>
+                    <select class="form-select mt-3" aria-label="Default select example" id="disciplina">
+                        <option>Português</option>
+                        <option>Matemática</option>
+                        <option>Ciências</option>
+                        <option>Clube da Música</option>
+                        <option>Natação</option>
+                        <option>Judô</option>
+                    </select>
+                    <input class="form-control mt-3" id="faltas" type="text" placeholder="Número de Faltas" aria-label="default input example">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-success" onclick="faltas.enviarFaltas()">Enviar Solicitacao</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col-2">Nome</th>
+                            <th scope="col-3">Disciplina</th>
+                            <th scope="col-3">Faltas</th>
+                            <th scope="col-2">Confirmação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyfaltas">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-4">
+        <h3 class="text-center">Lançamento de Notas</h3>
+        <div>
+            <div class="row p-4">
+                <div class="col-4">
+                    <select class="form-select" aria-label="Default select example" id="aluno1">
+                        <option>João Pedro</option>
+                        <option>Maria Antonela</option>
+                        <option>Pedro Ribeiro</option>
+                        <option>Carlos Varela</option>
+                        <option>Augusta Filha</option>
+                        <option>João Vitor</option>
+                        <option>Carol Emilia</option>
+                        <option>Carmem Miranda</option>
+                        <option>Maria Silva</option>
+                        <option>Mateus Conrado</option>
+                    </select>
+                    <select class="form-select mt-3" aria-label="Default select example" id="disciplina1">
+                        <option>Português</option>
+                        <option>Matemática</option>
+                        <option>Ciências</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <input class="form-control" id="nota1" type="text" placeholder="Nota 1° Bimestre" aria-label="default input example">
+                    <input class="form-control mt-3" id="nota2" type="text" placeholder="Nota 2° Bimestre" aria-label="default input example">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-success mt-4" onclick="notas.enviarNotas()">Enviar Notas</button>
+                </div>
+            </div>
+            <div class="p-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col-2">Nome</th>
+                            <th scope="col-3">Disciplina</th>
+                            <th scope="col-3">Nota 1° Bimestre</th>
+                            <th scope="col-3">Nota 2° Bimestre</th>
+                            <th scope="col-2">Média</th>
+                            <th scope="col-2">Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodynotas">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="pt-5">
+        <div class="container-fluid" style="background-color: #0a156e74" ;>
+            <div class="row">
+                <div class="col-3 pt-4">
+                    <img class="mx-auto d-block w-50 pt-4" src="../../img/logoescola.png" alt="" srcset="">
+                    <h6 class="text-center pb-3">Escola - Pedra Filosofal</h6>
+                    <p class="fw-bold text-warning ps-4">Nós transformamos os desafios da nova geração em oportunidades
+                        reais</p>
+                    <p class="ps-4">Acreditando que educar é construir juntos, a Pedagogia Freinet se alicerça em quatro
+                        eixos fundamentais: Cooperação, Comunicação, Documentação e Afetividade.</p>
+                </div>
+                <div class="col-3 pt-4">
+                    <h6 class="text-center p-3">Navegue pelo Site</h6>
+                    <ul class="nav flex-column ps-5" style="list-style: none;">
+                        <li class="nav-item">
+                            <a class="nav-link text-light fw-bold" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fw-bold" href="#">Área do Aluno</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fw-bold" href="#">Pais/Responsáveis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fw-bold" href="#">Área do Professor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fw-bold" href="#">Secretaria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fw-bold" href="#">Financeiro</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 pt-4">
+                    <i class="bi bi-facebook"></i>
+                    <h6 class="text-center p-3">Conheça nossas redes sociais</h6>
+                    <div class="text-center">
+                        <a class="text-light m-3 p-2 bg-light" href="#"><img src="../../img/facebook.svg" alt=""
+                                srcset=""></a>
+                        <a class="text-light m-3 p-2 bg-light" href="#"><img src="../../img/instagram.svg" alt=""
+                                srcset=""></a>
+                        <a class="text-light m-3 p-2 bg-light" href="#"><img src="../../img/linkedin.svg" alt=""
+                                srcset=""></a>
+                    </div>
+                    <h6 class="text-center pt-5">Endereço</h6>
+                    <p class="text-center">R. Professor Pedro Viriato Parigot de Souza, 5300</p>
+                    <p class="text-center">(41) 3333-3333</p>
+                    <div class="text-center"><a  href="#">admin@admin.com.br</a></div>
+                    
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <script src="../../script.js"></script>
+    <script src="./script.js"></script>
+    <script src="../aluno/scriptAluno.js"></script>
+    <script src="../secretaria/script.js"></script>
+    
+</body>
+</html>
